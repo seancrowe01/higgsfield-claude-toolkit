@@ -1,15 +1,53 @@
+# Environment & secrets
 .env
 .env.local
-*.log
-.DS_Store
-node_modules/
-.claude/settings.local.json
+.env.*
+*.pem
+*.key
+secrets/
+credentials.json
+service-account*.json
 
-# Generated outputs (track URLs in the sheet, not local files)
-outputs/
-assets/test-batch/
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Editor
 .vscode/
 .idea/
 *.swp
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Claude project-local settings (keep skills shared, settings personal)
+.claude/settings.local.json
+
+# Generated outputs (track URLs in the sheet, not local files)
+outputs/
+out/
+generated/
+renders/
+
+# Test material and client work — never commit
+assets/test-batch/
+assets/clients/
+assets/private/
+briefs/clients/
+data/clients/
+client-*/
+prospects/
+
+# Personal sheets / IDs
+generation-tracker-*.csv
+sheet-id.txt
+
+# Common reference image patterns that should stay private
+*-private.*
+*-client.*
+*-internal.*

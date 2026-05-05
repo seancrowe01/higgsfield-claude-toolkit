@@ -20,7 +20,7 @@ Every Higgsfield call you've ever made.
 | `mode` | string | `hyper_motion` (Marketing Studio only) |
 | `aspect_ratio` | string | `9:16` |
 | `prompt` | text | (full prompt) |
-| `reference_image` | string | `assets/hooked-gloves.jpg` (optional) |
+| `reference_image` | string | `assets/product-hero.jpg` (optional) |
 | `job_id` | string | Higgsfield job ID |
 | `status` | enum | `Pending` / `Generated` / `Failed` / `In Review` / `Approved` / `Rejected` |
 | `result_url` | URL | from Higgsfield |
