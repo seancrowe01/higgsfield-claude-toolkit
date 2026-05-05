@@ -1,0 +1,52 @@
+# [Your Project] — Creative Studio
+
+> Drop this file in your project root and customise the bracketed fields. Claude Code reads it on every session.
+
+## Owner
+[Your name] — [what you do]
+
+## Tools
+- `higgsfield` CLI (v0.1.28+)
+- 4 Higgsfield skills installed in `.claude/skills/`:
+  - `/higgsfield:generate` — image and video across 30+ models
+  - `/higgsfield:soul-id` — train face-faithful identities
+  - `/higgsfield:product-photoshoot` — branded product imagery (10 modes)
+  - `/higgsfield:marketplace-cards` — marketplace cards + A+ modules
+
+## Defaults
+
+| Use case | Model |
+|---|---|
+| Stills | `nano_banana_2` (Nano Banana Pro) |
+| Image-to-video animation | `seedance_2_0` |
+| UGC ad video | Marketing Studio `ugc` mode |
+| Premium launch video | Marketing Studio `hyper_motion` mode |
+| Face-faithful portraits | Soul V2 with trained `--soul-id` |
+
+## Aspect ratios
+- `1:1` — feed posts
+- `4:5` (1080×1350) — Instagram portrait, max real estate
+- `9:16` (1080×1920) — Stories, Reels, Shorts, TikTok
+- `16:9` — YouTube, web hero
+- `21:9` — cinematic banner
+
+## Brand
+- Colours: [list your brand palette]
+- Voice: [paste 1-2 sentences on tone]
+- Off-limits: [topics, words, claims to never use]
+
+## Folder layout
+- `assets/` — reference images (always tag these in prompts so the agent uses them)
+- `briefs/` — per-product briefs and creative slates
+- `outputs/` — final selects (raw generations live in your Higgsfield account; pull URLs here when promoting)
+- `data/` — Google Sheet IDs, generation logs, prompt history
+
+## Generation rules
+
+1. **Always reference an asset image when one exists.** Tell the model: "must appear exactly as shown in reference image — same colour, same text, do not change anything."
+2. **For Hypermotion launch videos:** use Marketing Studio + `hyper_motion` mode.
+3. **If a generation is blocked for sensitive content:** ask Claude to read the prompt back and identify the trigger word. Don't just retry.
+4. **Track every generation in a Google Sheet** (job_id, prompt, model, status, result URL). See `data/` for the template.
+
+## When in doubt
+Ask before running. Generations cost credits. Better to nail the prompt first.
